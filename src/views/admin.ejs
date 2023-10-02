@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/_base.css">
+    <link rel="stylesheet" href="/css/components/alert-popup/popup.css">
+    <link rel="stylesheet" href="/css/pages/admin_page.css">
+</head>
+
+<body>
+    <main>
+        <input type="checkbox" class="checkbox">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>  
+        <div id="admin-left">
+            <div id="button-container">
+                
+                <div class="btn-container-item active">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_54_507)">
+                        <rect x="8" y="8" width="39" height="39" rx="8" fill="white"/>
+                        <path d="M33 37H23C19 37 18 36 18 32V24C18 20 19 19 23 19H33C37 19 38 20 38 24V32C38 36 37 37 33 37Z" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30 24H35" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31 28H35" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M33 32H35" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24.5004 27.2899C25.5001 27.2899 26.3104 26.4796 26.3104 25.4799C26.3104 24.4803 25.5001 23.6699 24.5004 23.6699C23.5008 23.6699 22.6904 24.4803 22.6904 25.4799C22.6904 26.4796 23.5008 27.2899 24.5004 27.2899Z" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28 32.3298C27.86 30.8798 26.71 29.7398 25.26 29.6098C24.76 29.5598 24.25 29.5598 23.74 29.6098C22.29 29.7498 21.14 30.8798 21 32.3298" stroke="#232531" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_54_507" x="0" y="0" width="55" height="55" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="4"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_54_507"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_54_507" result="shape"/>
+                        </filter>
+                        </defs>
+                        </svg>
+                        
+                    <span>Vətədaş əlavə et</span>
+                </div>
+            </div>
+        </div>
+        <div id="admin-right">
+            <div class="alert-popup">Xəta baş verdi</div>
+            <h1>Vətəndaş əlavə et</h1>
+            <div id="inputs-section">
+                <div class="input-section-item">
+                    <input type="text" class="form-input" name="name" placeholder="Ad">
+                    <input type="text" class="form-input" name="surname" placeholder="Soyad">
+                    <input type="text" class="form-input" name="fatherName" placeholder="Ata adı">
+                    <input type="text" class="form-input" name="village" placeholder="Kənd">
+                </div>
+                <div class="input-section-item">
+                    <input type="text" class="form-input" name="fin" placeholder="FIN">
+                    <input type="text" class="form-input" name="district" placeholder="Rayon">
+                    <input type="text" class="form-input" name="objectType" placeholder="Obyekt tipi">
+                    <input type="text" class="form-input" name="occupationName" placeholder="Peşə adı">
+                </div>
+                <div class="input-section-item">
+                    <input type="text" class="form-input" name="address" placeholder="Ünvan">
+                    <input type="text" class="form-input" name="education" placeholder="Təhsil">
+                    <input type="text" class="form-input" name="specialStatus" placeholder="Xüsusi status">
+                    <div class="phone-numbers-container">
+                        <input type="text" class="form-input pnt" name="phoneNumber" placeholder="Telefon nömrəsi">
+                        <input type="text" class="form-input pnt pn2" style="display: none;" name="phoneNumber2" placeholder="Telefon nömrəsi">
+                        <input type="text" class="form-input pnt pn3" style="display: none;" name="phoneNumber3" placeholder="Telefon nömrəsi">
+                        <div class="add-pn">+</div>
+                    </div>
+                </div>
+                <div class="input-section-item">
+                    <input type="text" class="form-input" name="jobStructure" placeholder="İş strukturu">
+                    <input type="text" class="form-input" name="jobPosition" placeholder="İş vəzifəsi">
+                    <input type="text" class="form-input" name="currentPosition" placeholder="Hazırdakı vəzifəsi">
+                    <input type="text" class="form-input" name="occupationDistrict" placeholder="İşğal rayonu">
+                </div>
+                <div class="input-section-item">
+                    <input type="text" class="form-input" name="relation" placeholder="Qohumluq">
+                    <input type="text" class="form-input" name="birthDate" placeholder="Təvəllüd">
+                    <input type="text" class="invalid form-input" style="visibility: hidden;opacity: 0;position: relative;z-index: -2;">
+                    <input type="text" class="invalid form-input" style="visibility: hidden;opacity: 0;position: relative;z-index: -2;">
+
+                </div>
+                <div class="input-section-item d-flex maps-area">
+                    <textarea placeholder="Ümumi məlumat" class="form-input" name="generalInfo" cols="30" rows="10"></textarea>
+                <div id="map" ></div>
+
+                </div>
+                <div class="w-100 d-flex justify-content-end">
+                    <button class="btn add-btn">Əlavə et</button>
+
+                    <button class="btn clear-btn">Təmizlə</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/js/admin/view.js"></script>
+    <script src="/js/admin/model.js"></script>
+    <script src="/js/admin/controller.js"></script>
+
+</body>
+
+</html>

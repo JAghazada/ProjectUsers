@@ -1,0 +1,20 @@
+.alert-popup {
+    padding: 8px 25px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 15rem;
+    background-color: #000;
+    display: none;
+    z-index: 150;
+  }
+  .alert-popup.danger {
+    background-color: #d0342c;
+    display: block;
+  }
+  .alert-popup.success {
+    display: block;
+    background-color: #198754;
+  }

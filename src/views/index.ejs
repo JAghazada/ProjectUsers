@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project || Preview</title>
+    <link rel="stylesheet" href="/css/_base.css">
+    <link rel="stylesheet" href="/css/components/button/button.css">
+    <link rel="stylesheet" href="/css/components/input/input.css">
+    <link rel="stylesheet" href="/css/pages/home_page.css">
+</head>
+
+<body>
+    <main>
+        <div id="search-container">
+            <div class="inputs">
+                <input type="text" class="search-input" name="name" id="name" placeholder="Ad">
+                <input type="text" class="search-input"name="surname" id="surname" placeholder="Soyad">
+            </div>
+            <button class="btn search-btn">
+                Axtar
+            </button>
+        </div>
+        <div id="table-container">
+            <%users.forEach(user=>{%>
+                <div class="container-item">
+                    <div class="short-details">
+                        <div class="short-infos">
+                            <img src="/icons/profile-icon.svg" alt="">
+                            <div class="personal-short-info"><%=user.name%>  <%=user.surname%> <%=user.fatherName%></div>
+                        </div>
+                        <button data-cordinates="
+                            <%=JSON.stringify({
+                                cordinates:user.cordinates,
+                                uri:user.geouri
+                            })%>
+"  class="btn show-in-map">
+                            <a href="#">Xəritədə Göstər</a>
+                        </button>
+                    </div>
+                    <div class="more-details">
+                        <section>
+                            <div class="details-sections">
+                                <div class="detail-header">Qohumluq</div>
+                                <div class="detail-value"><%=user.relation %></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">Təvəllüd</div>
+                                <div class="detail-value"><%=user.birthDate%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">İşğalRayon</div>
+                                <div class="detail-value"><%=user.occupationDistrict%></div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="details-sections">
+                                <div class="detail-header">Kənd</div>
+                                <div class="detail-value"><%=user.village%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">FIN</div>
+                                <div class="detail-value"><%=user.fin%></div>
+                            </div>
+    
+                            <div class="details-sections">
+                                <div class="detail-header">Telefon nömrəsi</div>
+                                <div class="detail-value"><%=user.phoneNumber%></div>
+                                <div class="detail-value"><%=user.phoneNumber2%></div>
+                                <div class="detail-value"><%=user.phoneNumber3%></div>
+
+    
+                            </div>
+                        </section>
+                        <section>
+                            <div class="details-sections">
+                                <div class="detail-header">Rayon</div>
+                                <div class="detail-value"><%=user.district%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">Obyekt tipi</div>
+                                <div class="detail-value"><%=user.objectType%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">Ünvan</div>
+                                <div class="detail-value"><%=user.address%></div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="details-sections">
+                                <div class="detail-header">Təhsil</div>
+                                <div class="detail-value"><%=user.education%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">Xüsusi Status</div>
+                                <div class="detail-value"><%=user.specialStatus%></div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="details-sections">
+                                <div class="detail-header">Peşə adı</div>
+                                <div class="detail-value"><%=user.occupationName%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">İş strukturu</div>
+                                <div class="detail-value"><%=user.jobStructure%></div>
+                            </div>
+                            <div class="details-sections">
+                                <div class="detail-header">İş vəzifəsi</div>
+                                <div class="detail-value"><%=user.jobPosition%></div>
+                            </div>
+                        </section>
+                        <div class="details-sections">
+                            <div class="detail-header">Hal=hazırdakı vəzifə</div>
+                            <div class="detail-value"><%=user.currentPosition%></div>
+                        </div>
+                        <div class="details-sections">
+                            <div class="detail-header">Ümumi məlumat</div>
+                            <div class="detail-value"><%=user.generalInfo%></div>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+
+            
+         
+
+        </div>
+    </main>
+  
+<script> 
+
+
+
+    
+    
+    </script>
+       <script src="/js/userModel/view.js"></script>
+       <script src="/js/userModel/model.js"></script>
+       <script src="/js/userModel/controller.js"></script>
+</body>
+
+</html>
